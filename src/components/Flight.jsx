@@ -1,24 +1,28 @@
 import image from '../img/67c9e921661452cf8ad11cde7a8124c0.jpeg';
-import {data as json} from '../data';
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 export default function Flight() {
     useEffect(() => {
         document.title = 'Список космических рейсов';
     }, []);
 
-    const [list, setList] = useState(json.data);
+    const [data, setData] = useState(JSON.parse(localStorage.getItem('data')) || []);
 
     const handleRecord = (e) => {
         const index = Number(e.target.id);
 
-        setList((prevList) => {
-            return prevList.map((item, idx) => idx === index ? {
+        setData((prevData) => {
+            return prevData.map((item, idx) => idx === index ? {
                 ...item,
                 seats_available: item.seats_available - 1
             } : item);
         });
     };
+
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(data));
+    }, [data]);
 
     return (
         <main>
@@ -30,10 +34,10 @@ export default function Flight() {
                         </div>
                         <div className="col-md-6 col sm-12">
                             <h1>Список космических рейсов</h1>
-                            {!list ? (
+                            {!data ? (
                                 <p>Загрузка...</p>
                             ) : (
-                                list.map((item, index) => (
+                                data.map((item, index) => (
                                     <div className="booking-flight" key={index}>
                                         <div className="number">{item.flight_number}</div>
                                         <div className="arrival">{item.destination}</div>
@@ -45,8 +49,8 @@ export default function Flight() {
                                     </div>
                                 ))
                             )}
-                            <a href="#" className="btn btn-primary">Добавить рейс</a>
-                            <a href="#" className="btn btn-secondary">На главную</a>
+                            <Link to="/add-flight" className="btn btn-primary">Добавить рейс</Link>
+                            <Link to="/" className="btn btn-secondary">На главную</Link>
                         </div>
                     </div>
                 </div>

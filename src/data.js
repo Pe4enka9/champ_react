@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     "data": [
         {
             "flight_number": "СФ-103",
@@ -14,3 +14,5 @@ export const data = {
         }
     ]
 };
+
+localStorage.setItem('data', JSON.stringify(data.data));
