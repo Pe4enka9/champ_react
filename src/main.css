@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Jost", serif;
+}
+
+h2 {
+    color: #0d6efd;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.pilot + .small {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.main-nav ul li {
+    list-style: none;
+    display: inline-flex;
+    font-size: 18px;
+    font-family: "Jost", serif;
+}
+
+.main-nav ul li a {
+    padding: 20px;
+}
+
+.main-nav ul li a.active {
+    color: #dc3545;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding: 0;
+}
+
+.navigation {
+    border-bottom: 1px solid #c2cfdb;
+    height: 50px;
+}
+
+.logo-wrap {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0a58ca;
+}
+
+.birthday {
+    color: #969696;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    height: 200px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.footer-nav ul {
+    justify-content: center;
+    width: 100%;
+}
+
+main {
+    min-height: calc(100vh - 267px);
+    padding: 20px 0 50px;
+}
+
+.space-form input {
+    margin: 10px 0;
+}
+
+.booking-flight {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+}
