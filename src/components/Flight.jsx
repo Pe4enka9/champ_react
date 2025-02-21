@@ -49,7 +49,7 @@ export default function Flight() {
                                     </div>
                                 ))
                             )}
-                            <Link to="/add-flight" className="btn btn-primary">Добавить рейс</Link>
+                            <Link to="/add-flight" className="btn btn-primary me-3">Добавить рейс</Link>
                             <Link to="/" className="btn btn-secondary">На главную</Link>
                         </div>
                     </div>

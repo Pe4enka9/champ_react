@@ -14,7 +14,7 @@ export default function Header() {
                                     <li><NavLink to="/booking">Заказ на Луне</NavLink></li>
                                     <li><NavLink to="/missions">Миссии</NavLink></li>
                                     <li><NavLink to="/flight">Список космических рейсов</NavLink></li>
-                                    <li><a className="" href="#">Поиск</a></li>
+                                    <li><NavLink to="/search">Поиск</NavLink></li>
                                 </ul>
                             </nav>
                         </div>

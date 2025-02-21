@@ -6,6 +6,7 @@ import Missions from "./components/Missions";
 import Booking from "./components/Booking";
 import Flight from "./components/Flight";
 import AddFlight from "./components/AddFlight";
+import Search from "./components/Search";
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                 <Route path="/booking" element={<Booking/>}/>
                 <Route path="/flight" element={<Flight/>}/>
                 <Route path="/add-flight" element={<AddFlight/>}/>
+                <Route path="/search" element={<Search/>}/>
             </Routes>
 
             <Footer/>
